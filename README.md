@@ -1,75 +1,81 @@
-# 💎 Diamond Price Prediction & Market Segmentation  
-### **End-to-End Machine Learning + ANN + Clustering Project**
+# Diamond Price Prediction (Machine Learning + ANN + Clustering)
 
-##  Project Description
-This project builds a complete end-to-end Machine Learning pipeline to predict **diamond prices** based on multiple physical and categorical features. The workflow covers **data cleaning, transformation, EDA, feature engineering, regression modeling, ANN model building, and clustering for market segmentation**. Multiple ML algorithms are compared to identify the most accurate and stable predictive model. The project also includes K-Means clustering to segment diamonds into meaningful groups based on their characteristics, helping businesses understand pricing tiers and customer patterns.
+This project predicts the price of diamonds based on features like carat, cut, color, clarity, depth, table and dimensions (x, y, z). Along with price prediction, K-Means clustering is used to identify diamond groups based on quality and characteristics.
 
 ---
 
-## **Project Workflow**
-
-### **1️ Data Collection**
-- Loaded the diamond dataset.
-- Explored dataset structure, shape, and feature types.
-
-### **2️ Data Understanding**
-- Studied key attributes: `carat`, `cut`, `color`, `clarity`, `depth`, `table`, `x`, `y`, `z`, and `price`.
-
-### **3️ Data Cleaning & Processing**
-- Removed invalid or zero values in dimensions.
-- Outlier detection and removal.
-- Treated skewness using appropriate transformations.
-- Scaled numerical features where required.
-
-### **4️ Exploratory Data Analysis (EDA)**
-- Distribution plots for numerical features.
-- Boxplots to inspect outliers.
-- Correlation heatmap.
-- Price comparison based on cut, color, and clarity.
-- Pairplots for relationship inspection.
-
-### **5️ Feature Engineering**
-- Ordinal Encoding for:
-  - Cut
-  - Color
-  - Clarity
-- Feature importance analysis using tree-based models.
+## 1. Objective
+- To build a machine learning system that predicts diamond prices accurately.
+- To understand which features influence diamond prices the most.
+- To segment diamonds into groups (clusters) for market insights.
 
 ---
 
-## **Machine Learning Models Implemented**
+## 2. Dataset Description
+- Total features: Numerical + Categorical  
+- Target variable: **price**
+- Major features include:
+  - carat  
+  - cut  
+  - color  
+  - clarity  
+  - depth, table  
+  - x, y, z dimensions
+
+---
+
+## 3. Steps Performed
+
+### ✔ Data Cleaning
+- Removed rows with zero or invalid x, y, z values  
+- Checked missing values  
+- Treated major outliers  
+
+### ✔ Data Transformation
+- Categorical encoding (cut, color, clarity)
+- Standardization for numerical features
+- Skewness correction (log/box-cox)
+
+### ✔ Exploratory Data Analysis
+- Distribution analysis  
+- Boxplots  
+- Correlation heatmap  
+- Price comparison across categories  
+
+### ✔ Feature Engineering
+- Ordinal encoding  
+- Feature importance using RandomForest/XGBoost  
+
+---
+
+## 4. Machine Learning Models Used
 - Linear Regression  
-- Lasso Regression  
-- Ridge Regression  
+- Ridge / Lasso Regression  
 - Random Forest Regressor  
 - XGBoost Regressor  
-- **Artificial Neural Network (ANN)** using TensorFlow/Keras
+- **Artificial Neural Network (ANN)**
 
-###  **Model Evaluation Metrics**
+### Evaluation Metrics
 - R² Score  
 - MAE  
-- MSE  
 - RMSE  
 
-A comparison table is created to identify the best-performing model.
+---
+
+## 5. Clustering (K-Means)
+- Applied K-Means clustering  
+- Elbow Method used to select optimal K  
+- Cluster visualization for quality segmentation  
 
 ---
 
-##  **Clustering – Market Segmentation**
-- Implemented **K-Means** to group diamonds into meaningful segments.
-- Helps analyze pricing tiers and identify diamond categories.
-- Visualizations included for cluster separation.
-
----
-
-##  **Technologies Used**
+## 6. Technologies Used
 - Python  
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-Learn  
-- TensorFlow / Keras  
+- TensorFlow/Keras  
 - XGBoost  
+- Jupyter Notebook  
 
----
-
-## 📁 **Project Structure**
+**Mukul**  
